@@ -78,11 +78,11 @@ let model = {boxes: [], targetRow: 10, targetCol: 10, right:true, down:true, dir
         model.boxes[0].col += yVel;
 
         if ((model.boxes[0].row <0) || (model.boxes[0].row >= canvas.width/boxSize) || (model.boxes[0].col < 0) || (model.boxes[0].col >= canvas.height/boxSize)){
-            window.alert("Try not to hit the walls. Game over. Press Play Again.")
+            window.alert("Try not to hit the walls. Game over. Refresh to Play Again.")
             model.gameOver = true;
         }
         if (model.grid[model.boxes[0].row][model.boxes[0].col] == true) {
-            window.alert("Snakes can not eat themselves. Game over. Press Play Again.");
+            window.alert("Snakes can not eat themselves. Game over. Refresh to Play Again.");
             model.gameOver = true;
         }
         model.grid[model.boxes[0].row][model.boxes[0].col] = true;
@@ -198,19 +198,4 @@ let model = {boxes: [], targetRow: 10, targetCol: 10, right:true, down:true, dir
               model.direction = false;
               model.moving= true;
           }
-    });
-
-    document.querySelector("#replay").addEventListener("click", () =>{
-        model.gameOver = false;
-        model.boxes = [new Box(4,4)];
-        model.targetRow = 20;
-        model.targetCol = 20;
-        model.direction = true;
-        model.right = true;
-        for (i = 0; i < canvas.height/boxSize; i ++) {
-            for (j = 0; j < canvas.width/boxSize;j++){
-                model.grid[i][j] = false;
-            }
-        }
-        window.requestAnimationFrame(driver);
     });
