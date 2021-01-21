@@ -4,5 +4,5 @@ This remake of the class game Snake was created as part of a class project utili
 
 The green boxes that appear as the snake grows are additional obstacles to avoid as the snake eats the fruit in the game. 
 
-![alt text](https://github.com/jakeT-wagner/Snake/blob/master/snakeimg.png.jpg?raw=true)
+![alt text](https://github.com/jakeT-wagner/Snake/blob/master/snakeimg.png?raw=true)
 
